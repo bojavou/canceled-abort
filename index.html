@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.5.2/cdn/themes/light.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.5.2/cdn/shoelace-autoloader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="index.mjs"></script>
+  <body>
+<sl-button id="Stop">Stop All</sl-button>
+<br /><br />
+<p id="DownloadCaption">Downloading new data</p>
+<sl-progress-bar id="Download"></sl-progress-bar>
+<br /><br />
+<p id="PlotCaption">Crunching and plotting latest data</p>
+<div style="width:800px;"><canvas id="Plot"></canvas></div>
+<br /><br />
+<p id="SearchCaption">Searching for related documents</p>
+<sl-spinner id="SearchSpinner"></sl-spinner>
+<br /><br />
+<div id="SearchResults"></div>
+  </body>
+</html>
