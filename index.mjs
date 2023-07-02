@@ -24,8 +24,6 @@ async function download (signal) {
     }
   } catch (error) {
     if (error.name !== 'AbortError') throw error
-  }
-  if (signal.aborted) {
     const caption = document.getElementById('DownloadCaption')
     caption.innerHTML =
       `(Canceled) <span class="fade">${caption.innerText}</span>`
@@ -71,8 +69,6 @@ async function plot (signal) {
     }
   } catch (error) {
     if (error.name !== 'AbortError') throw error
-  }
-  if (signal.aborted) {
     const caption = document.getElementById('PlotCaption')
     caption.innerHTML =
       `(Canceled) <span class="fade">${caption.innerText}</span>`
@@ -104,14 +100,12 @@ async function search (signal) {
     }
   } catch (error) {
     if (error.name !== 'AbortError') throw error
-  }
-  const spinner = document.getElementById('SearchSpinner')
-  spinner.style.display = 'none'
-  if (signal.aborted) {
     const caption = document.getElementById('SearchCaption')
     caption.innerHTML =
       `(Canceled) <span class="fade">${caption.innerText}</span>`
   }
+  const spinner = document.getElementById('SearchSpinner')
+  spinner.style.display = 'none'
 }
 
 function sleep (milliseconds, signal) {
